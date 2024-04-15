@@ -56,3 +56,17 @@ keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current c
 
 -- restart lsp server (not on youtube nvim video)
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
+
+----------------------
+-- Terminal Keybinds
+----------------------
+
+-- Open/close terminal below
+keymap.set("n", "<leader>t", ":botright term<CR>")
+
+-- Toggle terminal
+keymap.set("n", "<leader>tt", "<C-\\><C-N>:botright term<CR>")
+
+-- Resize terminal (increase/decrease height)
+keymap.set("n", "<leader>t+", "<C-W>+")
+keymap.set("n", "<leader>t-", "<C-W>-")
