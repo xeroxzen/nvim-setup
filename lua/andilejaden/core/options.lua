@@ -34,4 +34,16 @@ opt.clipboard:append("unnamedplus")
 opt.splitright = true
 opt.splitbelow = true
 
+-- terminal
+opt.shell = "/bin/zsh"
+
+-- completion
+opt.completeopt = "menuone,noselect"
+
+-- terminal size
+opt.cmdheight = 2
+
+-- terminal color
+opt.termguicolors = true
+
 opt.iskeyword:append("-")
