@@ -1,19 +1,23 @@
--- import lspsaga safely
-local saga_status, saga = pcall(require, "lspsaga")
-if not saga_status then
-  return
-end
-
-saga.setup({
-  -- keybinds for navigation in lspsaga window
-  scroll_preview = { scroll_down = "<C-f>", scroll_up = "<C-b>" },
-  -- use enter to open file with definition preview
-  definition = {
-    edit = "<CR>",
+return {
+  "nvimdev/lspsaga.nvim",
+  event = "LspAttach",
+  dependencies = {
+    "nvim-treesitter/nvim-treesitter",
+    "nvim-tree/nvim-web-devicons",
   },
-  ui = {
-    colors = {
-      normal_bg = "#022746",
-    },
-  },
-})
+  config = function()
+    require("lspsaga").setup({
+      -- keybinds for navigation in lspsaga window
+      scroll_preview = { scroll_down = "<C-f>", scroll_up = "<C-b>" },
+      -- use enter to open file with definition preview
+      definition = {
+        edit = "<CR>",
+      },
+      ui = {
+        colors = {
+          normal_bg = "#022746",
+        },
+      },
+    })
+  end,
+}

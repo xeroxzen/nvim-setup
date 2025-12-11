@@ -1,6 +1,4 @@
--- set leader key to space
-vim.g.mapleader = " "
-
+-- Leader key is set in init.lua before plugins load
 local keymap = vim.keymap -- for conciseness
 
 ---------------------
